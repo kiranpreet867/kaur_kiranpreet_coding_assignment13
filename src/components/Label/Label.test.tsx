@@ -8,6 +8,7 @@ test("Label is visible", () => {
 });
 
 test("Label background changes when disabled", () => {
-  const { container } = render(<Label disabled />);
-  expect(container.firstChild).toHaveStyleRule("background-color", "#cccccc");
+  render(<Label text="Test Label" disabled />);
+  const label = screen.getByText("Test Label");
+  expect(label).toHaveStyleRule("background-color", "#cccccc");
 });

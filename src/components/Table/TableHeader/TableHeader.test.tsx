@@ -5,7 +5,7 @@ test("TableHeader is visible", () => {
   render(
     <table>
       <TableHeader />
-    </table>
+    </table>,
   );
 
   expect(screen.getByText("Name")).toBeVisible();
@@ -15,7 +15,7 @@ test("TableHeader renders", () => {
   render(
     <table>
       <TableHeader />
-    </table>
+    </table>,
   );
 
   expect(screen.getByText("Course")).toBeVisible();

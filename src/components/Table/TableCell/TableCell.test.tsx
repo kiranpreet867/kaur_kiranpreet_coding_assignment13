@@ -9,7 +9,7 @@ test("TableCell is visible", () => {
           <TableCell text="Test Cell" />
         </tr>
       </tbody>
-    </table>
+    </table>,
   );
 
   expect(screen.getByText("Test Cell")).toBeVisible();
@@ -23,7 +23,7 @@ test("TableCell disabled state renders", () => {
           <TableCell text="Disabled Cell" disabled />
         </tr>
       </tbody>
-    </table>
+    </table>,
   );
 
   expect(screen.getByText("Disabled Cell")).toBeVisible();

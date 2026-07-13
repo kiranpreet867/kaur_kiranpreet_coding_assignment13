@@ -26,6 +26,8 @@ export const Card = ({
 }: CardProps) => {
   return (
     <StyledCard
+      role="region"
+      aria-label={title}
       backgroundColor={backgroundColor}
       disabled={disabled}
     >

@@ -1,8 +1,6 @@
 import { TableHeaderProps } from "./TableHeader.types";
 
-export const TableHeader = ({
-  disabled = false,
-}: TableHeaderProps) => {
+export const TableHeader = ({ disabled = false }: TableHeaderProps) => {
   return (
     <thead style={{ opacity: disabled ? 0.6 : 1 }}>
       <tr>

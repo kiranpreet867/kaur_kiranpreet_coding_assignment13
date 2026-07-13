@@ -1,46 +1,162 @@
-# Getting Started with Create React App
+# Kaur_Kiranpreet_Coding_Assignment13
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is an updated React UI Component Library created for WEBD-3012 Business Systems Build and Testing.
 
-In the project directory, you can run:
+Assignment 13 extends Assignment 12 by adding code quality checks and continuous integration to the development process. The project uses Husky pre-commit hooks, Prettier, ESLint, React tests, GitHub Actions, and Docker to ensure code quality before deployment.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The UI Component Library includes the following reusable components:
 
-### `npm test`
+- Button
+- Label
+- Text
+- Dropdown
+- RadioButton
+- Img
+- HeroImage
+- Card
+- Table
+- TableHeader
+- TableRow
+- TableCell
+- TableFooter
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Code Quality Checks
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project automatically performs the following quality checks:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Prettier formatting check
+- ESLint code quality check
+- React unit tests
+- Production build verification
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Husky Pre-Commit Hook
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Husky is configured to prevent commits if any quality check fails.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Before every commit, Husky automatically runs:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm run check
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The command executes:
 
-## Learn More
+```bash
+npm run format
+npm run lint
+npm test -- --watchAll=false
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If any of these checks fail, the commit is blocked until the issues are fixed.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+## GitHub Actions
+
+GitHub Actions is configured to automatically run quality checks whenever code is pushed to GitHub or a Pull Request is created.
+
+The workflow performs the following:
+
+- Install project dependencies
+- Run Prettier
+- Run ESLint
+- Run React tests
+- Build the production application
+
+This ensures the same quality checks are enforced even if local pre-commit hooks are bypassed.
+
+---
+
+## Docker Instructions
+
+### Build the Docker image
+
+```bash
+docker build -t kaur_kiranpreet_coding_assignment13 .
+```
+
+### Run the Docker container
+
+```bash
+docker run --name kaur_kiranpreet_coding_assignment13 -p 8018:8018 kaur_kiranpreet_coding_assignment13
+```
+
+### Open the application
+
+```
+http://localhost:8018
+```
+
+---
+
+## Docker Details
+
+**Container Name**
+
+```
+kaur_kiranpreet_coding_assignment13
+```
+
+**Working Directory**
+
+```
+/kaur_kiranpreet_ui_garden_build_checks
+```
+
+**Port**
+
+```
+8018
+```
+
+---
+
+## Project Structure
+
+```
+src/
+components/
+.storybook/
+.github/workflows/
+.husky/
+Dockerfile
+README.md
+package.json
+```
+
+---
+
+## Technologies Used
+
+- React
+- TypeScript
+- Storybook
+- Styled Components
+- Husky
+- Prettier
+- ESLint
+- Jest
+- GitHub Actions
+- Docker
+
+---
+
+## GitHub Repository
+
+Add your GitHub repository link here after pushing your project.
+
+---
+
+## Author
+
+Kiranpreet Kaur

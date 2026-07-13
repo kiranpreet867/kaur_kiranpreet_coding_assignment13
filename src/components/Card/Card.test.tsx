@@ -8,9 +8,8 @@ test("Card is visible", () => {
 });
 
 test("Card background changes when disabled", () => {
-  const { container } = render(<Card disabled />);
-  expect(container.firstChild).toHaveStyleRule(
-    "background-color",
-    "#cccccc"
-  );
+  render(<Card title="Test Card" disabled />);
+  const card = screen.getByRole("region", { name: "Test Card" });
+
+  expect(card).toHaveStyleRule("background-color", "#cccccc");
 });

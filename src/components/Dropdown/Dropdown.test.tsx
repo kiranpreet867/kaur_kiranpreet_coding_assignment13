@@ -8,6 +8,7 @@ test("Dropdown is visible", () => {
 });
 
 test("Dropdown background changes when disabled", () => {
-  const { container } = render(<Dropdown disabled />);
-  expect(container.firstChild).toHaveStyleRule("background-color", "#cccccc");
+  render(<Dropdown options={["Option 1", "Option 2"]} disabled />);
+  const dropdown = screen.getByRole("combobox");
+  expect(dropdown).toHaveStyleRule("background-color", "#cccccc");
 });

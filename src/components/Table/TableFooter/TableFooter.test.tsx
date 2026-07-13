@@ -5,7 +5,7 @@ test("TableFooter is visible", () => {
   render(
     <table>
       <TableFooter />
-    </table>
+    </table>,
   );
 
   expect(screen.getByText("Total")).toBeVisible();
@@ -15,7 +15,7 @@ test("TableFooter renders disabled state", () => {
   render(
     <table>
       <TableFooter disabled />
-    </table>
+    </table>,
   );
 
   expect(screen.getByText("1 Student")).toBeVisible();

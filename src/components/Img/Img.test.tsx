@@ -8,6 +8,7 @@ test("Img is visible", () => {
 });
 
 test("Img background changes when disabled", () => {
-  const { container } = render(<Img disabled />);
-  expect(container.firstChild).toHaveStyleRule("background-color", "#cccccc");
+  render(<Img alt="Test Image" disabled />);
+  const img = screen.getByAltText("Test Image");
+  expect(img).toHaveStyleRule("background-color", "#cccccc");
 });

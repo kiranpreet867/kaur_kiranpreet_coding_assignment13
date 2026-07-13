@@ -1,8 +1,6 @@
 import { TableFooterProps } from "./TableFooter.types";
 
-export const TableFooter = ({
-  disabled = false,
-}: TableFooterProps) => {
+export const TableFooter = ({ disabled = false }: TableFooterProps) => {
   return (
     <tfoot
       style={{

@@ -7,7 +7,7 @@ test("TableRow is visible", () => {
       <tbody>
         <TableRow />
       </tbody>
-    </table>
+    </table>,
   );
 
   expect(screen.getByText("Kiranpreet")).toBeVisible();
@@ -19,7 +19,7 @@ test("TableRow disabled state renders", () => {
       <tbody>
         <TableRow disabled />
       </tbody>
-    </table>
+    </table>,
   );
 
   expect(screen.getByText("Web Development")).toBeVisible();

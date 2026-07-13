@@ -20,10 +20,7 @@ export const Dropdown = ({
   disabled = false,
 }: DropdownProps) => {
   return (
-    <StyledSelect
-      backgroundColor={backgroundColor}
-      disabled={disabled}
-    >
+    <StyledSelect backgroundColor={backgroundColor} disabled={disabled}>
       {options.map((option) => (
         <option key={option}>{option}</option>
       ))}

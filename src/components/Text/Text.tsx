@@ -9,9 +9,6 @@ const StyledText = styled.p<TextProps>`
   }
 `;
 
-export const Text = ({
-  text = "Sample Text",
-  disabled = false,
-}: TextProps) => {
+export const Text = ({ text = "Sample Text", disabled = false }: TextProps) => {
   return <StyledText disabled={disabled}>{text}</StyledText>;
 };
