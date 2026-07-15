@@ -5,7 +5,7 @@ WORKDIR /kaur_kiranpreet_ui_garden_build_checks
 
 COPY package*.json ./
 
-RUN npm ci
+RUN npm install
 
 COPY . .
 

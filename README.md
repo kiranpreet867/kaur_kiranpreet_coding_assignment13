@@ -153,7 +153,8 @@ package.json
 
 ## GitHub Repository
 
-Add your GitHub repository link here after pushing your project.
+https://github.com/kiranpreet867/kaur_kiranpreet_coding_assignment13
+
 
 ---
 
