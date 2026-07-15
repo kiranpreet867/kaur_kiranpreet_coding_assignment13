@@ -45,17 +45,19 @@ Husky is configured to prevent commits if any quality check fails.
 
 Before every commit, Husky automatically runs:
 
-```bash
+
+bash
 npm run check
-```
+
 
 The command executes:
 
-```bash
+
+bash
 npm run format
 npm run lint
 npm test -- --watchAll=false
-```
+
 
 If any of these checks fail, the commit is blocked until the issues are fixed.
 
@@ -81,21 +83,23 @@ This ensures the same quality checks are enforced even if local pre-commit hooks
 
 ### Build the Docker image
 
-```bash
+
+bash
 docker build -t kaur_kiranpreet_coding_assignment13 .
-```
+
 
 ### Run the Docker container
 
-```bash
+
+bash
 docker run --name kaur_kiranpreet_coding_assignment13 -p 8018:8018 kaur_kiranpreet_coding_assignment13
-```
+
 
 ### Open the application
 
-```
+
 http://localhost:8018
-```
+
 
 ---
 
@@ -103,27 +107,27 @@ http://localhost:8018
 
 **Container Name**
 
-```
+
 kaur_kiranpreet_coding_assignment13
-```
+
 
 **Working Directory**
 
-```
+
 /kaur_kiranpreet_ui_garden_build_checks
-```
+
 
 **Port**
 
-```
+
 8018
-```
+
 
 ---
 
 ## Project Structure
 
-```
+
 src/
 components/
 .storybook/
@@ -132,7 +136,7 @@ components/
 Dockerfile
 README.md
 package.json
-```
+
 
 ---
 
@@ -160,4 +164,4 @@ https://github.com/kiranpreet867/kaur_kiranpreet_coding_assignment13
 
 ## Author
 
-Kiranpreet Kaur
+Kiranpreet Kaur 
